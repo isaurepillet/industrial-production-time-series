@@ -1,1 +1,1 @@
-# projet-s-ries-temps
+Time-series modelling and forecasting of French industrial production using INSEE data
