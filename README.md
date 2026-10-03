@@ -31,7 +31,17 @@ Several ARMA specifications are compared. An ARMA(1,1) model is selected based o
 
 ## Data
 
-The analysis uses the monthly French industrial production index published by INSEE, covering January 1990 to March 2025.
+The analysis uses the seasonally and working-day adjusted (SA-WDA) French
+industrial production index for the manufacture of food products, beverages
+and tobacco products (NAF Rev. 2, A17, item C1), published by INSEE.
+
+- **Source:** INSEE
+- **Series ID:** 010768267
+- **Frequency:** Monthly
+- **Period analysed:** January 1990 – March 2025
+- **Base:** 100 in 2021
+
+[INSEE series](https://www.insee.fr/en/statistiques/serie/010768267)
 
 ## Tools
 
