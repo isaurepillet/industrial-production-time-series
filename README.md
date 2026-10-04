@@ -30,11 +30,11 @@ Several ARMA specifications are compared. An ARMA(1,1) model is selected based o
 
 ### Stationarity transformation
 
-![Original and log-differenced industrial production series](figures/stationarity%20transformation.png)
+![Original and log-differenced industrial production series](figures/stationarity_transformation.png)
 
 ### Short-term forecasting
 
-![ARMA(1,1) forecasts](figures/arma%20forecasts.png)
+![ARMA(1,1) forecasts](figures/arma_forecasts.png)
 
 ## Data
 The analysis uses the seasonally and working-day adjusted (SA-WDA) French
