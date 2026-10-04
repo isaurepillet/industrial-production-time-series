@@ -38,7 +38,7 @@ The original series is non-stationary, while the first-differenced logarithmic s
 
 ### Short-term forecasting
 
-![ARMA(1,1) forecasts](figures/arma forecast.png)
+![ARMA(1,1) forecasts](figures/arma forecasts.png)
 
 The selected ARMA(1,1) model is used to produce two-month-ahead forecasts with 95% prediction intervals.
 
