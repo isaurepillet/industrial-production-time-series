@@ -32,9 +32,19 @@ dir.create("figures", showWarnings = FALSE)
 
 # 2. Data import and preparation ------------------------------
 
-# The original INSEE data are stored in the data/ directory.
+# The original INSEE download is stored as a ZIP archive in data/.
+# Read the monthly values file directly from the archive so that the
+# analysis can be reproduced from a fresh clone of the repository.
+data_archive <- "data/serie_010768267_04102026.zip"
+archive_files <- unzip(data_archive, list = TRUE)$Name
+monthly_file <- archive_files[grepl("valeurs_mensuelles\\.csv$", archive_files)]
+
+if (length(monthly_file) != 1) {
+  stop("Could not uniquely identify valeurs_mensuelles.csv in the INSEE archive.")
+}
+
 raw_data <- read.csv(
-  "data/valeurs_mensuelles.csv",
+  unz(data_archive, monthly_file),
   sep = ";",
   header = FALSE
 )
@@ -304,15 +314,18 @@ theta <- as.numeric(arma_11$coef["ma1"])
 sigma2 <- arma_11$sigma2
 
 
-# Variance-covariance matrix of the two-step forecast errors.
-d <- 1 + phi + theta
+# Variance-covariance matrix of the one- and two-step forecast errors.
+# For the ARMA(1,1) convention used by forecast::Arima,
+# X_t = phi X_{t-1} + e_t + theta e_{t-1},
+# the first MA(infinity) coefficient is psi_1 = phi + theta.
+psi1 <- phi + theta
 
 Sigma <- matrix(
   c(
     sigma2,
-    d * sigma2,
-    d * sigma2,
-    (1 + d^2) * sigma2
+    psi1 * sigma2,
+    psi1 * sigma2,
+    (1 + psi1^2) * sigma2
   ),
   nrow = 2,
   byrow = TRUE
