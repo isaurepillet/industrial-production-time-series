@@ -22,28 +22,21 @@ The empirical analysis includes:
 - residual diagnostics using the Ljung-Box test;
 - short-term forecasting and prediction intervals;
 - construction of a joint confidence region for forecast errors.
-
 ## Results
 
 The original log-transformed series is found to be non-stationary, while its first difference is stationary according to both ADF and KPSS tests.
 
 Several ARMA specifications are compared. An ARMA(1,1) model is selected based on information criteria and residual diagnostics. The estimated model is then used to produce short-term forecasts and quantify forecast uncertainty.
 
-## Selected Results
-
 ### Stationarity transformation
 
 ![Original and log-differenced industrial production series](figures/stationarity%20transformation.png)
-
-The original series is non-stationary, while the first-differenced logarithmic series is stationary according to both ADF and KPSS tests.
 
 ### Short-term forecasting
 
 ![ARMA(1,1) forecasts](figures/arma%20forecasts.png)
 
-The selected ARMA(1,1) model is used to produce two-month-ahead forecasts with 95% prediction intervals.
 ## Data
-
 The analysis uses the seasonally and working-day adjusted (SA-WDA) French
 industrial production index for the manufacture of food products, beverages
 and tobacco products (NAF Rev. 2, A17, item C1), published by INSEE.
@@ -73,6 +66,10 @@ The analysis was conducted in **R**, using packages including:
 - `data/` — input data
 - `figures/` — main figures produced by the analysis
 - `report/` — full project report
+
+## Full Report
+
+The complete project report, including model specification, diagnostics, theoretical derivations and additional results, is available [here](report/time_series_report.pdf).
 
 ## Authors
 
