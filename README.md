@@ -28,6 +28,19 @@ The empirical analysis includes:
 The original log-transformed series is found to be non-stationary, while its first difference is stationary according to both ADF and KPSS tests.
 
 Several ARMA specifications are compared. An ARMA(1,1) model is selected based on information criteria and residual diagnostics. The estimated model is then used to produce short-term forecasts and quantify forecast uncertainty.
+## Selected Results
+
+### Stationarity transformation
+
+![Original and log-differenced industrial production series](figures/stationarity transformation.png)
+
+The original series is non-stationary, while the first-differenced logarithmic series is stationary according to both ADF and KPSS tests.
+
+### Short-term forecasting
+
+![ARMA(1,1) forecasts](figures/arma forecast.png)
+
+The selected ARMA(1,1) model is used to produce two-month-ahead forecasts with 95% prediction intervals.
 
 ## Data
 
