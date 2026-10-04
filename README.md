@@ -21,7 +21,7 @@ The empirical analysis includes:
 - ARMA model estimation and selection using AIC and BIC;
 - residual diagnostics using the Ljung-Box test;
 - short-term forecasting and prediction intervals;
-- construction of a joint confidence region for forecast errors.
+- construction of a joint prediction region for forecast errors.
 ## Results
 
 The original log-transformed series is found to be non-stationary, while its first difference is stationary according to both ADF and KPSS tests.
@@ -75,3 +75,13 @@ The complete project report, including model specification, diagnostics, theoret
 
 Camille Legrée-Haghbarth and Isaure Pillet  
 ENSAE Paris — Linear Time Series
+
+## Reproducing the analysis
+
+From the repository root, run:
+
+```r
+source("code/time_series_analysis.R")
+```
+
+The script reads the INSEE data archive stored in `data/` and reproduces the main estimation and forecasting workflow.
