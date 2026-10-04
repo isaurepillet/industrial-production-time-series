@@ -27,6 +27,8 @@ library(urca)
 library(gridExtra)
 library(ellipse)
 
+# Create output directory if needed
+dir.create("figures", showWarnings = FALSE)
 
 # 2. Data import and preparation ------------------------------
 
