@@ -69,7 +69,7 @@ The analysis was conducted in **R**, using packages including:
 
 ## Full Report
 
-The complete project report, including model specification, diagnostics, theoretical derivations and additional results, is available [here](report/time_series_report.pdf).
+The complete project report, including model specification, diagnostics, theoretical derivations and additional results, is available [here](report/Time_series_report.pdf).
 
 ## Authors
 
